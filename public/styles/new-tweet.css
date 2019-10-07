@@ -1,0 +1,22 @@
+.new-tweet {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.new-tweet textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 5px solid rgb(75, 49, 146);
+  width: 100%;
+  font-weight: bold;
+  color: rgb(75, 49, 146);
+}
+.new-tweet input {
+  font-family: "Bungee", sans-serif;
+  color: #FFFFFF;
+  background-color: rgb(75, 49, 146);
+}
+
+.counter {
+  font-family: "Bungee", sans-serif;
+  float: right;
+}

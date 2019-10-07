@@ -1,0 +1,19 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-color: orange; 
+  margin-top: 120px;
+  background-image: url(/images/asfalt-dark.png);
+}
+
+header div {
+  text-align: center;
+  position: relative;
+
+}
+
+
+h2 {
+  position: relative;
+}
+

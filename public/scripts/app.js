@@ -9,7 +9,7 @@ const data = [
   {
     "user": {
       "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
+      "avatar": "https://i.imgur.com/73hZDYK.png"
       ,
       "handle": "@SirIsaac"
     },
@@ -21,8 +21,9 @@ const data = [
   {
     "user": {
       "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
+      "avatar": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@rd"
+    },
     "content": {
       "text": "Je pense , donc je suis"
     },
@@ -32,16 +33,14 @@ const data = [
 
 //Render new Tweet 
 
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   for (let tweet of tweets) {
-    console.log(createTweetElement(tweet));
     $('.tweet-container').prepend(createTweetElement(tweet));
   }
 }
 
 //Function to create new tweet in proper format
 
-//$(document).ready(function() {
 const createTweetElement = function (tweet) {
   const $tweet = `
     <article class="tweet">
@@ -63,9 +62,9 @@ const createTweetElement = function (tweet) {
       </footer>
     </article>
   `;
-return $tweet
+  return $tweet
 }
-//})
 
-renderTweets(data);
-
+$(document).ready(function () {
+  renderTweets(data);
+})

@@ -45,6 +45,7 @@ body {
 .handle {
   margin-left: auto;
   visibility: hidden;
+  opacity: 0.5;
 }
 
 .tweet img {

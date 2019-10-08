@@ -81,11 +81,12 @@ footer {
 
 .tweet-icons footer {
   height: 10px;
-  padding: 3px;
+  padding: 5px;
 }
 
 .tweet-icons img {
-  height: 25px;
+  height: 40px;
+  padding: 5px;
 }
 
 .tweet:hover {

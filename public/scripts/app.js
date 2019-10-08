@@ -35,7 +35,7 @@ const data = [
 const renderTweets = function(tweets) {
   for (let tweet of tweets) {
     console.log(createTweetElement(tweet));
-    $('#tweet-container').prepend(createTweetElement(tweet));
+    $('.tweet-container').prepend(createTweetElement(tweet));
   }
 }
 
@@ -56,9 +56,9 @@ const createTweetElement = function (tweet) {
       <footer>
         <p class="tweet-time-posted">${tweet.created_at}</p>
         <div class="tweet-icons">
-          <img src=FLAG-ICON alt="flag">
-          <img src=RETWEET-ICON alt="retweet">
-          <img src=LIKE-ICON alt="like">
+          <img src="/images/flag.png" alt="flag">
+          <img src="/images/startup.png" alt="retweet">
+          <img src="/images/like.png" alt="like">
         </div>
       </footer>
     </article>

@@ -14,9 +14,11 @@
   font-family: "Bungee", sans-serif;
   color: #FFFFFF;
   background-color: rgb(75, 49, 146);
+  float: left;
 }
 
 .counter {
   font-family: "Bungee", sans-serif;
   float: right;
+  color: rgb(75, 49, 146);
 }

@@ -28,7 +28,7 @@
       <span>tweeter</span>
     </nav>
 
-    <header>
+    <header class="banner">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -42,14 +42,52 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-        <section class="new-tweet">
-            <h2>Compose Tweet</h2>
-            <form action="/tweets" method="POST">
-              <textarea id="tweet-box" name="text" placeholder="What are you humming about?"></textarea>
-              <input type="submit" value="Tweet">
-              <span class="counter">140</span>
-            </form>
-          </section>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets" method="POST">
+          <textarea id="tweet-text-box" name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
+      <section class="tweet-container">
+        <article class="tweet">
+          <header class="tweet-header">
+              <img src="/images/profile-hex.png">
+              <h4>Your Name</h4>
+              <h4 class="handle">@TweeterHandle</h4>
+          </header>
+          <div class="tweet-input">
+            <p>This is a new Tweet!!</p>
+          </div>
+          <footer>
+            <p class="tweet-time-posted">x days ago</p>
+            <div class="tweet-icons">
+              <img src=FLAG-ICON alt="flag">
+              <img src=RETWEET-ICON alt="retweet">
+              <img src=LIKE-ICON alt="like">
+            </div>
+          </footer>
+        </article>
+        <article class="tweet">
+            <header class="tweet-header">
+                <img src="/images/profile-hex.png">
+                <h4>Your Name</h4>
+                <h4 class="handle">@TweeterHandle</h4>
+            </header>
+            <div class="tweet-input">
+              <p>This is a new Tweet!!</p>
+            </div>
+            <footer>
+              <p class="tweet-time-posted">x days ago</p>
+              <div class="tweet-icons">
+                <img src=FLAG-ICON alt="flag">
+                <img src=RETWEET-ICON alt="retweet">
+                <img src=LIKE-ICON alt="like">
+              </div>
+            </footer>
+          </article>
+      </section>
     </main>
     <script src="scripts/composer-char-counter.js"></script>
   </body>

@@ -1,7 +1,7 @@
 // Function for Tweet Word counter
 
 $(document).ready(function() {
-  $("#tweet-box").keyup(function() {
+  $("#tweet-text-box").keyup(function() {
     let length = $(this).val().length;
     let counter = 140;
     if (counter - length < 0) {

@@ -1,4 +1,4 @@
-header {
+.banner {
   height: 400px;
   width: 100%;
   background-color: orange; 
@@ -6,7 +6,7 @@ header {
   background-image: url(/images/asfalt-dark.png);
 }
 
-header div {
+.banner div {
   text-align: center;
   position: relative;
 

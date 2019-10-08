@@ -26,6 +26,63 @@ body {
   margin: auto;
   text-align: center;
 }
+
+.tweet {
+  border: solid black 2px;
+  padding: 1em;
+  margin: 2em;
+}
+
+.tweet-header {
+  padding: 0.5em;
+  margin-bottom: 0;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.handle {
+  margin-left: auto;
+}
+
+.tweet img {
+  height: 100px;
+}
+
+.tweet-header span {
+  display: inherit;
+}
+
+.tweet-input {
+  padding: 0.5em;
+  overflow: auto;
+  background: transparent;
+  border: none;  
+  font-weight: bold;
+  color: rgb(75, 49, 146);
+  border-bottom: 5px solid rgb(75, 49, 146);
+  text-align: left;
+} 
+
+.tweet footer {
+  height: 2.5em;
+  margin-top: 0.5em;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  margin-block-end: 0;
+  margin-block-start: 20px;
+  height: 30px;
+}
+
+.tweet-icons footer {
+  height: 30px;
+  padding: 3px;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

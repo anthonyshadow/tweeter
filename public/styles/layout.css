@@ -31,6 +31,7 @@ body {
   border: solid black 2px;
   padding: 1em;
   margin: 2em;
+  opacity: 0.5;
 }
 
 .tweet-header {
@@ -43,15 +44,13 @@ body {
 
 .handle {
   margin-left: auto;
+  visibility: hidden;
 }
 
 .tweet img {
   height: 100px;
 }
 
-.tweet-header span {
-  display: inherit;
-}
 
 .tweet-input {
   padding: 0.5em;
@@ -82,6 +81,15 @@ footer {
 .tweet-icons footer {
   height: 30px;
   padding: 3px;
+}
+
+.tweet:hover {
+  box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
+  opacity: 1;
+}
+
+.tweet:hover .handle{
+  visibility: visible;
 }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

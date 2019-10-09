@@ -7,6 +7,14 @@
 // Fake data taken from initial-tweets.json
 // const data = [
 // ]
+
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
+
 //Render new Tweet 
 
 const renderTweets = function (tweets) {
@@ -26,7 +34,7 @@ const createTweetElement = function (tweet) {
         <p class="handle">${tweet.user.handle}</p>
       </header>
       <div class="tweet-input">
-        <p>${tweet.content.text}</p>
+        <p>${escape(tweet.content.text)}</p>
       </div>
       <footer>
         <p class="tweet-time-posted">${tweet.created_at}</p>
@@ -86,3 +94,9 @@ $(document).ready(function () {
   loadTweets();
 })
 
+
+$(document).ready(function () {
+$(".slide-button").on("click", function() {
+  $(".new-tweet").slideToggle();
+})
+})

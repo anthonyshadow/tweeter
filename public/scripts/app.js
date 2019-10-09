@@ -64,7 +64,7 @@ $(function () {
         method: 'POST',
         data: $("#tweet-text-box").serialize(),
         success: function() {
-          console.log("hello");
+          loadTweets();
         }
       })
     }

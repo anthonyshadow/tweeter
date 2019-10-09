@@ -94,7 +94,7 @@ footer {
   opacity: 1;
 }
 
-.tweet:hover .handle{
+.tweet:hover .handle {
   visibility: visible;
 }
 /*

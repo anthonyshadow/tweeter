@@ -65,6 +65,48 @@ const createTweetElement = function (tweet) {
   return $tweet
 }
 
+//call to render new Tweets
+
 $(document).ready(function () {
   renderTweets(data);
 })
+
+//Ajax post request
+
+// const loadTweets = function() {
+//   $.ajax("/tweets", {
+//     method: "GET"
+//   })
+// }
+$(function () {
+  const $button = $(".submit-tweet");
+  $button.on('submit', function () {
+    event.preventDefault();
+    console.log("button clicked")
+    $.ajax("/tweets", {
+      method: 'POST',
+      data: $("#tweet-text-box").serialize(),
+      success: function () {
+        console.log(data);
+      }
+    })
+  })
+})
+
+
+
+
+
+
+
+//   $(".submit-tweet").on("submit", function(event) {
+//   event.preventDefault();
+//   const data = $(this).serialize();
+//   $.ajax("/tweets", {
+//     method: "POST", 
+//     data, 
+//     success: function() {
+//       console.log(data);
+//     }
+//   })
+// })

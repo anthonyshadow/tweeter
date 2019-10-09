@@ -22,3 +22,14 @@
   float: right;
   color: rgb(75, 49, 146);
 }
+
+.alert-container {
+  display: none;
+  border: solid 7.5px red;
+  margin-top: 2em; 
+  font: bold
+}
+
+.error-message {
+  font-family: "Bungee", sans-serif;
+}

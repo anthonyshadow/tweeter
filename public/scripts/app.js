@@ -64,15 +64,20 @@ $(function () {
     const $input = $("#tweet-text-box").serialize();
     const text = $input.split("=")[1]
     if (!text) {
-      alert("You didn't type anything");
+      $(".alert-container").slideDown();
+      $(".error-message").text("I'm hungry, don't leave me empty!");
+      // alert("You didn't type anything");
     } else if (text.length > 140) {
-      alert("Your tweet is over 140 characters!");
+      $(".alert-container").slideDown();
+      $(".error-message").text("That's too much! Your tweet is longer than 140");
+      // alert("Your tweet is over 140 characters!");
     } else {
       $.ajax("/tweets", {
         method: 'POST',
         data: $("#tweet-text-box").serialize(),
         success: function() {
           loadTweets();
+          $(".alert-container").slideUp();
         }
       })
     }
@@ -89,14 +94,19 @@ const loadTweets = function() {
   })
 }
 
+const toggle = function() {
+  $(".slide-button").on("click", function() {
+    $(".new-tweet").slideToggle();
+  })
+}
+
+
+
 
 $(document).ready(function () {
   loadTweets();
+  toggle();
+  $(".new-tweet").hide();
 })
 
 
-$(document).ready(function () {
-$(".slide-button").on("click", function() {
-  $(".new-tweet").slideToggle();
-})
-})

@@ -4,9 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Fake data taken from initial-tweets.json
-// const data = [
-// ]
 
 const escape =  function(str) {
   let div = document.createElement('div');
@@ -49,13 +46,8 @@ const createTweetElement = function (tweet) {
   return $tweet
 }
 
-//call to render new Tweets
 
-// $(document).ready(function () {
-//   renderTweets(data);
-// })
-
-//Ajax post request
+//Ajax post request, upon success loads new tweets. Also displays if user did not follow tweet guidelines
 
 
 $(function () {
@@ -84,6 +76,7 @@ $(function () {
   })
 })
 
+//display new tweets on homepage
 
 const loadTweets = function() {
   $.ajax("/tweets", {
@@ -94,6 +87,8 @@ const loadTweets = function() {
   })
 }
 
+//Toggle new tweet box to appear oe disapear upon click
+
 const toggle = function() {
   $(".slide-button").on("click", function() {
     $(".new-tweet").slideToggle();
@@ -101,7 +96,7 @@ const toggle = function() {
 }
 
 
-
+//only allows functions to run once the page is fully loaded
 
 $(document).ready(function () {
   loadTweets();

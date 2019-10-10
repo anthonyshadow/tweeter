@@ -4,9 +4,10 @@ nav {
   height: 120px;
   width: 100%;
   z-index: 1000;
-  background-color: #4056A1;
   color: #ffffff;
   padding: 1.5em;
+  background-color: orange; 
+  background-image: url(/images/asfalt-dark.png);
 }
 
 .logo {

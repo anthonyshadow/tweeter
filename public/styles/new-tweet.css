@@ -1,6 +1,7 @@
 .new-tweet {
   padding-top: 2em;
   padding-bottom: 2em;
+  padding-right: 1em;
 }
 .new-tweet textarea {
   background: transparent;
@@ -27,7 +28,12 @@
   display: none;
   border: solid 7.5px red;
   margin-top: 2em; 
-  font: bold
+  font: bold;
+}
+
+.alert-container img {
+  height: 50px;
+  text-align: center;
 }
 
 .error-message {

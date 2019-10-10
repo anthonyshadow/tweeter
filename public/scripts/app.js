@@ -96,12 +96,30 @@ const toggle = function() {
 }
 
 
+
+//scroll back to top button
+
+const scrollUp = function() {
+  $(".back-to-top").on("click", function () {
+    $("container").scrollTop();
+  })
+}
+
+
+$(document).on("scroll", function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    $(".back-to-top").css("display", "block");
+  } else {
+    $(".back-to-top").css("display", "none");
+  }
+});
+
+
 //only allows functions to run once the page is fully loaded
 
 $(document).ready(function () {
   loadTweets();
   toggle();
   $(".new-tweet").hide();
+  scrollUp();
 })
-
-

@@ -34,7 +34,7 @@ const createTweetElement = function (tweet) {
         <p>${escape(tweet.content.text)}</p>
       </div>
       <footer>
-        <p class="tweet-time-posted">${tweet.created_at}</p>
+        <p class="tweet-time-posted">${formatAMPM()}</p>
         <div class="tweet-icons">
           <img src="/images/flag.png" alt="flag">
           <img src="/images/startup.png" alt="retweet">
@@ -120,6 +120,19 @@ $(document).on("scroll", function() {
 });
 
 
+//timestamp function for tweet
+
+function formatAMPM() {
+let d = new Date(),
+minutes = d.getMinutes().toString().length === 1 ? '0'+ d.getMinutes() : d.getMinutes(),
+hours = d.getHours().toString().length === 1 ? '0' + d.getHours() : d.getHours(),
+ampm = d.getHours() >= 12 ? 'pm' : 'am',
+months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+return days[d.getDay()] + ' ' + months[d.getMonth()] + ' ' + d.getDate() + ' ' + d.getFullYear() + ' ' + hours + ':' + minutes + ampm;
+};
+
+
 //only allows functions to run once the page is fully loaded
 
 $(document).ready(function () {
@@ -128,3 +141,5 @@ $(document).ready(function () {
   $(".new-tweet").hide();
   scrollUp();
 })
+
+

@@ -70,6 +70,8 @@ $(function () {
         success: function() {
           loadTweets();
           $(".alert-container").slideUp();
+          $("#tweet-text-box").val("");
+          $(".counter").text(140);
         }
       })
     }
@@ -82,6 +84,7 @@ const loadTweets = function() {
   $.ajax("/tweets", {
     method: "GET",
     success: function(data) {
+      $(".tweet-container").empty();
       renderTweets(data);
     }
   })
@@ -101,7 +104,9 @@ const toggle = function() {
 
 const scrollUp = function() {
   $(".back-to-top").on("click", function () {
-    $("container").scrollTop();
+    $("html, body").animate({
+      scrollTop: $("<nav>").offset().top + $('window').height()
+    }, )
   })
 }
 
